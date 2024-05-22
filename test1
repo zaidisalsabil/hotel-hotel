@@ -1,0 +1,42 @@
+<?php
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Include database connection
+    include_once "db_connection.php";
+
+    // Get form data
+    $numero = $_POST["numero"];
+    $etage = $_POST["etage"];
+    $type = $_POST["type"];
+    $statut = $_POST["statut"];
+    $prix = $_POST["prix"];
+
+    // Check if uploads folder exists, if not, create it
+    $upload_folder = "uploads";
+    if (!is_dir($upload_folder)) {
+        mkdir($upload_folder, 0777, true);
+    }
+
+    // Upload image file if provided
+    if ($_FILES["image"]["error"] == UPLOAD_ERR_OK) {
+        $tmp_name = $_FILES["image"]["tmp_name"];
+        $image_path = $upload_folder . "/" . $_FILES["image"]["name"];
+        move_uploaded_file($tmp_name, $image_path);
+    } else {
+        $image_path = null; // No image provided
+    }
+
+    // Insert data into database
+    $stmt = $conn->prepare("INSERT INTO chambre (numero, num d'étage, type, statut, prix, image_path) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sissds", $numero, $etage, $type, $statut, $prix, $image_path);
+    if ($stmt->execute()) {
+        echo "Chamber added successfully.";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    // Close statement and database connection
+    $stmt->close();
+    $conn->close();
+}
+?>
