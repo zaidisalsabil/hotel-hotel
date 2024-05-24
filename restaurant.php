@@ -113,23 +113,16 @@
                                                     <div>
                                                         <h3>KOKTAIL JUCIE <span class="primary-text" >1000DA</span></h3>
                                             
-                                                    </div>
-                                                    <style>
-                                                        .right{
-                                                            padding-right: 100px;
-                                                        }
-                                                    </style>
-                                                    <div class="right">
-                                                    <div class="menu-items" >
-                                                       
-                                                                <img src="./img/food4.png" alt="CAPO STEAK">
-                                                                <div>
-                                                                    <h3>CAPO STEAK <span class="primary-text" >1300DA</span></h3>
+                 </div><div class="menu-items">
+           
+                     <img src="./img/food4.png" alt="CAPO STEAK">
+                      <div>
+          <h3>CAPO STEAK <span class="primary-text" >1300DA</span></h3>
                                                          
-                                                                </div><div class="menu-items">
-                                                                    <div class="menu-items-left">
-                                                                        <div class="menu-items">
-                                                                            <img src="./img/food5.png" alt="ORGANIC FRUIT SALAD">
+               </div><div class="menu-items">
+           <div class="menu-items-left">
+           <div class="menu-items">
+           <img src="./img/food5.png" alt="ORGANIC FRUIT SALAD">
                                                                             <div>
                                                                                 <h3>ORGANIC FRUIT SALAD<span class="primary-text" >1200DA</span></h3>
                                                                             </div>
@@ -140,16 +133,19 @@
                                                                                 <div>
                                                                                     <h3>CHEESE PIZZA<span class="primary-text" >2000DA</span></h3>
                                                                           
-                                                                        </div>                                                                                                                                                          
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                           <!--Header End-->
-                                          </main>
+                                                                            
+        
+        </div>
+
+                        <dev>
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+     </section>
+     <!--Header End-->
+</main>
     
 </body>
 </html>
